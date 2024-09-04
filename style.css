@@ -1,0 +1,99 @@
+
+  .body{
+    font-family: Garamond, serif; 
+    background-color: lightskyblue;
+  }
+  .header{
+    width: 98%;
+    height: 50px;
+    padding: 10px;
+    border-radius: 25px;
+    margin: 0;
+    background-color: #0070C0;
+  }
+  .inline{
+    display: inline;
+  }
+  .header a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  .header input[type=text] {
+    float: right;
+    border: none;
+    margin-right: 16px;
+    font-family: Garamond, serif;
+    font-size: 17px;
+  }
+  .homeImg{
+    width: 25px;
+    height: 25px;
+  }
+  .linkHeader{
+    float: left;
+    margin: auto;
+  }
+  .linkFooter{
+    text-align: center;
+    top: 50%;
+    left: 50%;
+  }
+  .main{
+    width: 100%;
+    overflow: auto;
+  }
+  .Left{
+    width: 70%;
+    height: 50%;
+    padding: 10px;
+    float: left;
+  }
+  .Right{
+    Width: 25%;
+    height: 100%;
+    float: left;
+  }
+  .footer{
+    width: 98%;
+    height: 50px;
+    padding: 10px;
+    border-radius: 25px;
+    background-color: #0070C0;
+  }
+  .title{
+    text-align: center;
+    font-family: Garamond, serif;
+  }
+  .p{
+    font-size: 20px;
+  }
+  .aFoot{
+    font-family: Garamond, serif;
+  }
+  .button{
+    width: 100px;
+    height: 50px;
+    border-radius: 5px;
+    font-family: Garamond, serif;
+    background-color: #E97132;
+  }
+  .exMain{
+    width: 100%;
+    height: 25%;
+    text-align: center;
+  }
+  .exButton{
+    width: 200px;
+    height: 50px;
+    font-family: Garamond, serif;
+    background-color: #0070C0;
+    border-radius: 25px;
+  }
+  .natureTitle{
+    width: 100%;
+    height: 10%;
+  }
+  .linkBut{
+    text-align: center;
+  }
+  
