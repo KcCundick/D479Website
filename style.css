@@ -61,6 +61,7 @@
     background-color: #0070C0;
   }
   .title{
+    font-size: 50px;
     text-align: center;
     font-family: Garamond, serif;
   }
@@ -94,6 +95,10 @@
     height: 10%;
   }
   .linkBut{
+    text-align: center;
+  }
+  .faqp{
+    font-size: 25px;
     text-align: center;
   }
   
