@@ -101,4 +101,29 @@
     font-size: 25px;
     text-align: center;
   }
+  .buttonPlan {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    background-color: #007BFF;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+  }
   
+  .buttonPlan:hover {
+    background-color: #0056b3;
+  }
+  .buttonSearch {
+    font-family: Garamond, serif;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    background-color: #E97132;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  .buttonSearch:hover {
+    background-color: #f8b794;
+  }
