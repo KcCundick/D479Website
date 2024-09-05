@@ -3,6 +3,48 @@
     <head>
         <title>D479 Web Page Plan Your Trip</title>
         <link rel="stylesheet" href="Style.css">
+        
+        <style>
+            form {
+              display: flex;
+              flex-direction: column;
+              gap: 10px;
+              max-width: 300px;
+              margin: auto;
+            }
+            
+            label {
+              display: flex;
+              align-items: center;
+              gap: 10px;
+              font-size: 16px;
+            }
+            
+            input[type="checkbox"] {
+              width: 20px;
+              height: 20px;
+            }
+            
+            .buttonPlan {
+              padding: 10px 20px;
+              font-size: 16px;
+              border: none;
+              background-color: #007BFF;
+              color: white;
+              border-radius: 4px;
+              cursor: pointer;
+            }
+            
+            .buttonPlan:hover {
+              background-color: #0056b3;
+            }
+            #total {
+              font-size: 18px;
+              font-weight: bold;
+              margin-top: 20px;
+            }
+            </style>
+
     </head>
     <body class="body">
         <header class="header">
@@ -42,11 +84,78 @@
         </header>
         <!--  --------------------------------------------------------------------------------------->
         <main class="main">
-            <div class="Left">
+            <div>
                 <h1 class="title">Plan your trip to the Island of Taniti</h1>
-
             </div>
+            <div>
+                <form id="checkboxForm">
+                    <br>
+                    <label>
+                      <input type="checkbox" name="price" value="80.00">
+                      <strong>Zipline</strong> ------------------- $80.00 per
+                    </label>
+                    <br>
+                    <label>
+                      <input type="checkbox" name="price" value="12.00">
+                      <strong>History Museum</strong> -------- $12.00 per
+                    </label>
+                    <br>
+                    <label>
+                      <input type="checkbox" name="price" value="175.00">
+                      <strong>Fishing Tour</strong> ------------- $175.00 per
+                    </label>
+                    <br>
+                    <label>
+                      <input type="checkbox" name="price" value="52.00">
+                      <strong>Golf</strong> ----------------------- $52.00 per
+                    </label>
+                    <br>
+                    <label>
+                      <input type="checkbox" name="price" value="100.00">
+                      <strong>Helicopter Ride</strong> --------- $100.00 per
+                    </label>
+                    <br>
+                    <label>
+                      <input type="checkbox" name="price" value="10.00">
+                      <strong>Art Gallery</strong> -------------- $10.00 per
+                    </label>
+                    <label for="people"><strong>Number of People:</strong></label>
+                    <select id="people" name="people">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                    </select>
+                    <br>
+                    <br>
+                    <div id="total">Total: $0.00</div>
+                    <br>
+                  </form>
+            </div>
+            <script>
+                document.querySelectorAll('input[type="checkbox"]').forEach(checkbox => {
+                  checkbox.addEventListener('change', calculateTotal);
+                });
+            
+                document.getElementById('people').addEventListener('change', calculateTotal);
 
+                function calculateTotal() {
+                    let total = 0;
+                    document.querySelectorAll('input[type="checkbox"]:checked').forEach(checkbox => {
+                    total += parseFloat(checkbox.value);
+                    });
+
+                    const people = parseInt(document.getElementById('people').value);
+
+                    const finalTotal = total * people;
+
+                    document.getElementById('total').innerText = `Total: $${finalTotal.toFixed(2)}`;
+                }
+            </script>
         </main>  
         <!--  --------------------------------------------------------------------------------------->        
         <footer class="footer">
